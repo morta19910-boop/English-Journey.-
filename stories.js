@@ -179,3 +179,106 @@ questions:[
 }
 );
 
+
+window.journeyLibrary.stories.push(
+{
+title:"The Lost Puppy",
+ar:"الجرو الضائع",
+level:"A1",
+cover:"house",
+scenes:["house","map","house"],
+parts:[
+"Tom|توم saw|رأى a|أداة small|صغير puppy|جرو near|قرب his|منزله house|المنزل.",
+"The|ال puppy|جرو was|كان hungry|جائع and|و cold|بردان. Tom|توم gave|أعطى it|إياه food|طعام and|و water|ماء.",
+"A|أداة girl|فتاة came|جاءت and|و found|وجدت her|الخاص_بها puppy|جرو. She|هي thanked|شكرت Tom|توم."
+],
+translation:"رأى توم جرواً صغيراً قرب منزله. كان الجرو جائعاً ويشعر بالبرد، فأعطاه توم الطعام والماء. جاءت فتاة ووجدت جروها وشكرت توم.",
+questions:[
+["What did Tom see?","A puppy","A bird","A horse"],
+["Where was it?","Near his house","At school","In a shop"],
+["How did it feel?","Hungry and cold","Happy","Angry"],
+["What did Tom give it?","Food and water","Money","Books"],
+["Who thanked Tom?","A girl","A farmer","A doctor"]
+]
+},
+{
+title:"The Magic Map",
+ar:"الخريطة السحرية",
+level:"A2",
+cover:"map",
+scenes:["house","map","bridge"],
+parts:[
+"Emma|إيما discovered|اكتشفت an|أداة old|قديمة map|خريطة inside|داخل a|أداة wooden|خشبي box|صندوق.",
+"The|ال map|خريطة showed|أظهرت a|أداة secret|سري path|طريق through|عبر the|ال forest|غابة.",
+"She|هي followed|اتبعت the|ال path|طريق and|و found|وجدت a|أداة beautiful|جميلة waterfall|شلال."
+],
+translation:"اكتشفت إيما خريطة قديمة داخل صندوق خشبي. أظهرت الخريطة طريقاً سرياً عبر الغابة. اتبعت الطريق ووجدت شلالاً جميلاً.",
+questions:[
+["Who found the map?","Emma","Sara","Adam"],
+["Where was the map?","Inside a box","Under a bed","In a car"],
+["What was the box made of?","Wood","Gold","Glass"],
+["Where did the path lead?","Through a forest","Through a city","Through a school"],
+["What did Emma find?","A waterfall","A castle","A train"]
+]
+},
+{
+title:"The Brave Little Bird",
+ar:"الطائر الصغير الشجاع",
+level:"A1",
+cover:"bird",
+scenes:["bird","rain","bird"],
+parts:[
+"A|أداة little|صغير bird|طائر lived|عاش in|في a|أداة tall|طويلة tree|شجرة.",
+"One|ذات day|يوم a|أداة strong|قوية storm|عاصفة came|جاءت. The|ال bird|طائر was|كان afraid|خائف.",
+"It|هو waited|انتظر until|حتى the|ال rain|مطر stopped|توقف. Then|ثم it|هو flew|طار home|للمنزل."
+],
+translation:"عاش طائر صغير في شجرة طويلة. وفي أحد الأيام جاءت عاصفة قوية فشعر بالخوف. انتظر حتى توقف المطر ثم طار إلى منزله.",
+questions:[
+["Where did the bird live?","In a tree","In a box","In a car"],
+["What happened?","A storm came","A fire started","A party began"],
+["How did the bird feel?","Afraid","Angry","Excited"],
+["What did it wait for?","The rain to stop","A friend","Food"],
+["Where did it fly?","Home","To school","To a shop"]
+]
+},
+{
+title:"The Hidden Room",
+ar:"الغرفة المخفية",
+level:"B1",
+cover:"castle",
+scenes:["castle","map","house"],
+parts:[
+"During|خلال his|الخاصة_به vacation|عطلة Oliver|أوليفر explored|استكشف an|أداة ancient|قديمة castle|قلعة.",
+"He|هو noticed|لاحظ a|أداة narrow|ضيق passage|ممر behind|خلف a|أداة large|كبيرة painting|لوحة.",
+"Inside|بالداخل he|هو discovered|اكتشف valuable|ثمينة manuscripts|مخطوطات and|و immediately|فوراً informed|أبلغ the|ال authorities|سلطات."
+],
+translation:"خلال عطلته استكشف أوليفر قلعة قديمة. لاحظ ممراً ضيقاً خلف لوحة كبيرة. وفي الداخل اكتشف مخطوطات ثمينة وأبلغ السلطات فوراً.",
+questions:[
+["Who explored the castle?","Oliver","Tom","Adam"],
+["When did he explore it?","During his vacation","During an exam","At work"],
+["What did he notice?","A narrow passage","A broken window","A golden bird"],
+["What was inside?","Valuable manuscripts","Food","Furniture"],
+["Who did he inform?","The authorities","His classmates","Nobody"]
+]
+},
+{
+title:"The Power of Kindness",
+ar:"قوة اللطف",
+level:"B2",
+cover:"house",
+scenes:["house","rain","house"],
+parts:[
+"Despite|رغم her|الخاصة_بها financial|مالية difficulties|صعوبات Sarah|سارة regularly|بانتظام helped|ساعدت elderly|مسنين neighbors|جيران.",
+"When|عندما she|هي unexpectedly|بشكل_مفاجئ lost|فقدت her|الخاصة_بها job|وظيفة the|ال community|مجتمع decided|قرر to|أن support|يدعم her|إياها.",
+"Sarah|سارة realized|أدركت that|أن genuine|حقيقي kindness|لطف creates|يخلق lasting|دائمة relationships|علاقات."
+],
+translation:"رغم صعوباتها المالية، كانت سارة تساعد جيرانها المسنين بانتظام. وعندما فقدت وظيفتها بصورة مفاجئة قرر المجتمع دعمها. أدركت سارة أن اللطف الحقيقي يصنع علاقات دائمة.",
+questions:[
+["Who helped the neighbors?","Sarah","Emma","Lina"],
+["What difficulties did she face?","Financial difficulties","Travel problems","Language problems"],
+["What did Sarah lose?","Her job","Her phone","Her house"],
+["Who supported her?","The community","A stranger","Nobody"],
+["What creates lasting relationships?","Genuine kindness","Money","Fear"]
+]
+}
+);
