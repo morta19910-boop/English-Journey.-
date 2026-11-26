@@ -24,6 +24,7 @@ jobs:
         run: |
           mkdir -p www
           cp index.html www/index.html
+          cp stories.js www/stories.js
           npm init -y
           npm install @capacitor/core@7 @capacitor/cli@7 @capacitor/android@7
           npx cap init "English Journey" com.englishjourney.app --web-dir www
