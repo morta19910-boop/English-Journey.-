@@ -1,0 +1,26 @@
+{
+  "name": "English Journey",
+  "short_name": "English Journey",
+  "id": "/English-Journey.-/",
+  "start_url": "/English-Journey.-/",
+  "scope": "/English-Journey.-/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#4338ca",
+  "lang": "ar",
+  "dir": "rtl",
+  "description": "Learn English through stories, quizzes and games.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
