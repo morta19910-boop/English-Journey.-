@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="manifest" href="manifest.json">
 <title>English Journey 2.0</title>
+
+<script src="stories.js"></script>
+
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#f2f6f1;color:#173d35;font-family:Arial,sans-serif}
@@ -415,6 +418,9 @@ app.innerHTML=`<div class="hero"><div style="font-size:90px">🏆</div>
 <div class="card"><h3>الكلمات المكتسبة</h3><h2>${Object.keys(saved).length}</h2></div>
 <div class="card"><h3>مستواك</h3><h2>${points>=200?'👑 المستكشف المحترف':points>=80?'🥈 المغامر':'🥉 المستكشف المبتدئ'}</h2></div>`;
 }
+
+stories.push(...(window.journeyLibrary?.stories || []));
+
 update();
 home();
 </script>
