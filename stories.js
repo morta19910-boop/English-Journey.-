@@ -282,3 +282,105 @@ questions:[
 ]
 }
 );
+window.journeyLibrary.stories.push(
+{
+title:"The Empty Train",
+ar:"القطار الفارغ",
+level:"A2",
+cover:"map",
+scenes:["house","map","bridge"],
+parts:[
+"Jack|جاك arrived|وصل at|إلى the|ال station|محطة early|مبكراً.",
+"He|هو entered|دخل an|أداة empty|فارغ train|قطار and|و found|وجد a|أداة letter|رسالة.",
+"The|ال letter|رسالة belonged|تخص to|إلى an|أداة old|مسن man|رجل. Jack|جاك returned|أعاد it|إياها."
+],
+translation:"وصل جاك إلى المحطة مبكراً. دخل قطاراً فارغاً ووجد رسالة تخص رجلاً مسناً، فأعادها إليه.",
+questions:[
+["Who arrived early?","Jack","Adam","Tom"],
+["Where did he arrive?","A station","A school","A hospital"],
+["What was empty?","A train","A house","A box"],
+["What did he find?","A letter","A phone","A key"],
+["What did Jack do?","Returned the letter","Burned it","Lost it"]
+]
+},
+{
+title:"The Mountain Rescue",
+ar:"الإنقاذ في الجبل",
+level:"B1",
+cover:"bridge",
+scenes:["map","rain","bridge"],
+parts:[
+"David|ديفيد was|كان climbing|يتسلق a|أداة mountain|جبلاً when|عندما he|هو heard|سمع someone|شخصاً shouting|يصرخ.",
+"He|هو discovered|اكتشف an|أداة injured|مصاب climber|متسلق near|قرب a|أداة rock|صخرة.",
+"David|ديفيد contacted|اتصل emergency|طوارئ services|خدمات and|و stayed|بقي until|حتى help|المساعدة arrived|وصلت."
+],
+translation:"كان ديفيد يتسلق جبلاً عندما سمع شخصاً يصرخ. اكتشف متسلقاً مصاباً قرب صخرة. اتصل بخدمات الطوارئ وبقي حتى وصلت المساعدة.",
+questions:[
+["What was David doing?","Climbing a mountain","Swimming","Driving"],
+["What did he hear?","Someone shouting","Music","A bird"],
+["Who was injured?","A climber","A doctor","A farmer"],
+["Who did he contact?","Emergency services","His teacher","His brother"],
+["When did he leave?","After help arrived","Immediately","Before calling"]
+]
+},
+{
+title:"The Clockmaker's Secret",
+ar:"سر صانع الساعات",
+level:"B2",
+cover:"house",
+scenes:["house","map","house"],
+parts:[
+"An|أداة elderly|مسن clockmaker|صانع_ساعات maintained|احتفظ a|أداة mysterious|غامضة collection|مجموعة of|من antique|أثرية clocks|ساعات.",
+"His|الخاص_به apprentice|متدرب discovered|اكتشف that|أن one|واحدة contained|احتوت a|أداة concealed|مخفية compartment|حجرة.",
+"Inside|بالداخل lay|وجد documents|وثائق revealing|تكشف the|ال forgotten|المنسي history|تاريخ of|لـ their|الخاصة_بهم town|بلدة."
+],
+translation:"احتفظ صانع ساعات مسن بمجموعة غامضة من الساعات الأثرية. اكتشف متدربه أن إحداها تحتوي على حجرة مخفية، بداخلها وثائق تكشف التاريخ المنسي لبلدتهم.",
+questions:[
+["What did the man make?","Clocks","Shoes","Cars"],
+["Who discovered the secret?","His apprentice","A farmer","A doctor"],
+["What was concealed?","A compartment","A door","A bridge"],
+["What was inside?","Documents","Food","Water"],
+["What did they reveal?","The town's history","A recipe","A song"]
+]
+},
+{
+title:"The Price of Truth",
+ar:"ثمن الحقيقة",
+level:"C1",
+cover:"map",
+scenes:["house","map","house"],
+parts:[
+"A|أداة journalist|صحفي uncovered|كشف compelling|دامغة evidence|أدلة of|على institutional|مؤسسي corruption|فساد. Nevertheless|ومع_ذلك powerful|نافذون individuals|أفراد attempted|حاولوا to|أن suppress|يخفوا his|الخاص_به findings|نتائج.",
+"Confronted|مواجها with|بـ intimidation|ترهيب and|و professional|مهنية uncertainty|مخاطر he|هو deliberated|فكر_بعمق over|حول the|ال consequences|عواقب of|لـ publication|نشر.",
+"Ultimately|في_النهاية he|هو published|نشر the|ال investigation|تحقيق believing|معتقداً that|أن accountability|المساءلة outweighed|فاقت personal|شخصية convenience|راحة."
+],
+translation:"كشف صحفي أدلة دامغة على فساد مؤسسي، لكن أفراداً نافذين حاولوا إخفاء نتائج تحقيقه. وأمام الترهيب والمخاطر المهنية، فكر بعمق في عواقب النشر. وفي النهاية نشر التحقيق مؤمناً بأن المساءلة أهم من الراحة الشخصية.",
+questions:[
+["What did he uncover?","Evidence of corruption","A treasure","A scientific theory"],
+["What did powerful people attempt?","To suppress his findings","To reward him","To promote him"],
+["What did he face?","Intimidation","Celebrations","Entertainment"],
+["What did he eventually do?","Published the investigation","Destroyed the evidence","Resigned"],
+["What motivated his decision?","Accountability","Personal wealth","Popularity"]
+]
+},
+{
+title:"The Illusion of Certainty",
+ar:"وهم اليقين",
+level:"C2",
+cover:"castle",
+scenes:["house","map","castle"],
+parts:[
+"A|أداة distinguished|بارز philosopher|فيلسوف devoted|كرس decades|عقوداً to|لـ defending|الدفاع_عن an|أداة ostensibly|ظاهرياً irrefutable|غير_قابلة_للدحض theory|نظرية.",
+"However|لكن an|أداة overlooked|مهملة inconsistency|مفارقة compelled|أجبرت him|إياه to|أن reassess|يعيد_تقييم the|ال epistemological|المعرفية foundations|أسس of|لـ his|الخاص_به convictions|قناعات.",
+"Rather|بدلاً than|من concealing|إخفاء the|ال contradiction|تناقض he|هو acknowledged|أقر his|الخاص_به fallibility|قابلية_الخطأ. His|الخاص_به intellectual|فكري humility|تواضع ultimately|في_النهاية proved|أثبت more|أكثر enduring|دواماً than|من his|الخاص_به original|الأصلية conclusions|استنتاجات."
+],
+translation:"كرس فيلسوف بارز عقوداً للدفاع عن نظرية بدت غير قابلة للدحض. لكن مفارقة مهملة أجبرته على إعادة تقييم الأسس المعرفية لقناعاته. وبدلاً من إخفاء التناقض، أقر بقابليته للخطأ، وأثبت تواضعه الفكري أنه أكثر بقاءً من استنتاجاته الأصلية.",
+questions:[
+["What did the philosopher defend?","A theory","A political party","A castle"],
+["What challenged his convictions?","An overlooked inconsistency","A financial crisis","A natural disaster"],
+["What did he reassess?","His epistemological foundations","His property","His friendships"],
+["What did he acknowledge?","His fallibility","His superiority","His wealth"],
+["What proved more enduring?","Intellectual humility","Absolute certainty","Public recognition"]
+]
+}
+);
