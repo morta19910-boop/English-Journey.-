@@ -486,3 +486,105 @@ questions:[
 ]
 }
 );
+window.journeyLibrary.stories.push(
+{
+title:"The Little Lantern",
+ar:"الفانوس الصغير",
+level:"A1",
+cover:"house",
+scenes:["house","rain","house"],
+parts:[
+"Ali|علي found|وجد a|أداة small|صغير lantern|فانوس near|قرب his|منزله house|منزل.",
+"The|ال night|ليل was|كان dark|مظلماً and|و cold|بارداً.",
+"He|هو used|استخدم the|ال lantern|فانوس to|لكي help|يساعد an|أداة old|مسن man|رجل."
+],
+translation:"وجد علي فانوساً صغيراً قرب منزله. كان الليل مظلماً وبارداً. استخدم الفانوس لمساعدة رجل مسن.",
+questions:[
+["Who found the lantern?","Ali","Omar","Adam"],
+["What did he find?","A lantern","A book","A phone"],
+["Where was it?","Near his house","At school","In a shop"],
+["How was the night?","Dark and cold","Hot","Sunny"],
+["Who did he help?","An old man","A child","A teacher"]
+]
+},
+{
+title:"The Hidden Waterfall",
+ar:"الشلال المخفي",
+level:"A2",
+cover:"map",
+scenes:["map","bridge","rain"],
+parts:[
+"Emma|إيما discovered|اكتشفت an|أداة old|قديمة map|خريطة inside|داخل a|أداة wooden|خشبي box|صندوق.",
+"She|هي followed|اتبعت the|ال path|طريق through|عبر the|ال forest|غابة.",
+"Finally|أخيراً she|هي reached|وصلت a|أداة beautiful|جميل waterfall|شلال and|و took|التقطت photographs|صوراً."
+],
+translation:"اكتشفت إيما خريطة قديمة داخل صندوق خشبي. اتبعت الطريق عبر الغابة. وأخيراً وصلت إلى شلال جميل والتقطت الصور.",
+questions:[
+["Who discovered the map?","Emma","Sara","Lina"],
+["Where was the map?","In a box","In a car","At school"],
+["What was the box made of?","Wood","Glass","Metal"],
+["Where did she walk?","Through a forest","Through a city","Across a desert"],
+["What did she find?","A waterfall","A castle","A village"]
+]
+},
+{
+title:"The Mysterious Visitor",
+ar:"الزائر الغامض",
+level:"B1",
+cover:"house",
+scenes:["rain","house","map"],
+parts:[
+"During|خلال a|أداة stormy|عاصفة evening|أمسية Daniel|دانيال heard|سمع someone|شخصاً knocking|يطرق at|على the|ال door|باب.",
+"A|أداة stranger|غريب asked|طلب for|عن shelter|مأوى because|لأن his|الخاصة_به car|سيارة had|قد broken|تعطلت down|تماماً.",
+"Daniel|دانيال offered|قدم him|له food|طعاماً and|و helped|ساعده him|إياه contact|يتصل his|الخاصة_به family|عائلة."
+],
+translation:"خلال أمسية عاصفة سمع دانيال شخصاً يطرق الباب. طلب رجل غريب المأوى لأن سيارته تعطلت. قدم له دانيال الطعام وساعده على الاتصال بعائلته.",
+questions:[
+["Who heard the knocking?","Daniel","Adam","Samuel"],
+["How was the weather?","Stormy","Sunny","Warm"],
+["Who was at the door?","A stranger","A doctor","A child"],
+["What had broken down?","A car","A train","A bicycle"],
+["Who did the visitor contact?","His family","His teacher","His manager"]
+]
+},
+{
+title:"Beyond the Mountains",
+ar:"ما وراء الجبال",
+level:"B2",
+cover:"bridge",
+scenes:["map","bridge","house"],
+parts:[
+"An|أداة ambitious|طموحة explorer|مستكشفة decided|قررت to|أن investigate|تستكشف a|أداة remote|نائية valley|وادياً.",
+"Despite|رغم numerous|عديدة obstacles|عقبات she|هي continued|واصلت her|الخاصة_بها challenging|الشاقة expedition|رحلة.",
+"Her|الخاصة_بها discovery|اكتشاف revealed|كشف evidence|أدلة of|على an|أداة ancient|قديمة civilization|حضارة."
+],
+translation:"قررت مستكشفة طموحة استكشاف واد ناء. ورغم العقبات العديدة واصلت رحلتها الشاقة. وكشف اكتشافها عن أدلة على وجود حضارة قديمة.",
+questions:[
+["Who explored the valley?","An explorer","A musician","A teacher"],
+["Where did she travel?","A remote valley","A modern city","An island"],
+["What did she face?","Numerous obstacles","No problems","A competition"],
+["Did she continue?","Yes","No","Unknown"],
+["What did she discover?","An ancient civilization","A factory","A school"]
+]
+},
+{
+title:"The Fragile Balance",
+ar:"التوازن الهش",
+level:"C1",
+cover:"bird",
+scenes:["bird","rain","map"],
+parts:[
+"Environmental|بيئيون scientists|علماء documented|وثقوا a|أداة significant|ملحوظ decline|تراجع in|في biodiversity|التنوع_الحيوي.",
+"Their|الخاصة_بهم investigation|دراسة identified|حددت habitat|الموائل destruction|تدمير as|باعتباره a|أداة primary|رئيسي contributor|عامل.",
+"Collaborative|تعاونية conservation|الحفاظ_على_البيئة initiatives|مبادرات gradually|تدريجياً restored|أعادت ecological|البيئي stability|الاستقرار."
+],
+translation:"وثق علماء البيئة تراجعاً ملحوظاً في التنوع الحيوي. وحددت دراستهم تدمير الموائل الطبيعية باعتباره عاملاً رئيسياً. وأعادت مبادرات الحفاظ على البيئة التعاونية الاستقرار البيئي تدريجياً.",
+questions:[
+["Who documented the decline?","Environmental scientists","Artists","Engineers"],
+["What declined?","Biodiversity","Population","Technology"],
+["What was a major cause?","Habitat destruction","Education","Tourism"],
+["What helped recovery?","Conservation initiatives","Industrial expansion","Pollution"],
+["What was restored?","Ecological stability","Financial stability","Political stability"]
+]
+}
+);
