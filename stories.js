@@ -384,3 +384,105 @@ questions:[
 ]
 }
 );
+window.journeyLibrary.stories.push(
+{
+title:"The Talking Cat",
+ar:"القط المتكلم",
+level:"A1",
+cover:"cat",
+scenes:["house","cat","house"],
+parts:[
+"Lucy|لوسي had|كان_لديها a|أداة black|أسود cat|قط named|اسمه Max|ماكس.",
+"One|ذات morning|صباح Max|ماكس said|قال hello|مرحباً. Lucy|لوسي was|كانت very|جداً surprised|مندهشة.",
+"The|ال cat|قط wanted|أراد some|بعض milk|الحليب. Lucy|لوسي smiled|ابتسمت and|و gave|أعطت him|إياه milk|حليباً."
+],
+translation:"كان لدى لوسي قط أسود اسمه ماكس. وفي أحد الصباحات قال ماكس مرحباً، فشعرت لوسي بالدهشة. أراد القط بعض الحليب، فابتسمت لوسي وأعطته الحليب.",
+questions:[
+["What animal did Lucy have?","A cat","A dog","A bird"],
+["What was its name?","Max","Tom","Jack"],
+["What color was it?","Black","White","Brown"],
+["What did Max say?","Hello","Goodbye","Thanks"],
+["What did Max want?","Milk","Bread","Rice"]
+]
+},
+{
+title:"The Island Adventure",
+ar:"مغامرة الجزيرة",
+level:"A2",
+cover:"map",
+scenes:["map","rain","bridge"],
+parts:[
+"Two|اثنان friends|صديقان traveled|سافرا to|إلى a|أداة small|صغيرة island|جزيرة during|خلال summer|الصيف.",
+"They|هما discovered|اكتشفا a|أداة strange|غريب cave|كهف near|قرب the|ال beach|شاطئ.",
+"Inside|بالداخل they|هما found|وجدا an|أداة old|قديم boat|قارب and|و a|أداة box|صندوق full|ممتلئ of|بـ coins|عملات."
+],
+translation:"سافر صديقان إلى جزيرة صغيرة خلال الصيف. اكتشفا كهفاً غريباً قرب الشاطئ. وفي الداخل وجدا قارباً قديماً وصندوقاً مليئاً بالعملات.",
+questions:[
+["How many friends traveled?","Two","Three","Five"],
+["Where did they go?","An island","A city","A school"],
+["When did they travel?","During summer","During winter","At midnight"],
+["What did they discover?","A cave","A hotel","A hospital"],
+["What was inside the box?","Coins","Books","Clothes"]
+]
+},
+{
+title:"The Invisible Visitor",
+ar:"الزائر الخفي",
+level:"B1",
+cover:"house",
+scenes:["house","rain","map"],
+parts:[
+"Every|كل night|ليلة strange|غريبة noises|أصوات came|صدرت from|من an|أداة empty|فارغ room|غرفة in|في Michael's|مايكل house|منزل.",
+"He|هو installed|ثبت a|أداة camera|كاميرا to|لكي discover|يكتشف the|ال source|مصدر of|لـ the|ال mysterious|غامضة sounds|أصوات.",
+"The|ال recording|تسجيل revealed|كشف a|أداة small|صغير animal|حيوان hiding|يختبئ behind|خلف the|ال furniture|أثاث."
+],
+translation:"كل ليلة كانت تصدر أصوات غريبة من غرفة فارغة في منزل مايكل. ثبت كاميرا لاكتشاف مصدر الأصوات الغامضة. كشف التسجيل عن حيوان صغير يختبئ خلف الأثاث.",
+questions:[
+["When did the noises occur?","Every night","Every morning","Every summer"],
+["Where did they come from?","An empty room","A garden","A street"],
+["What did Michael install?","A camera","A radio","A television"],
+["What did the recording reveal?","A small animal","A ghost","A visitor"],
+["Where was it hiding?","Behind the furniture","On the roof","Under a tree"]
+]
+},
+{
+title:"The Last Signal",
+ar:"الإشارة الأخيرة",
+level:"B2",
+cover:"map",
+scenes:["map","rain","house"],
+parts:[
+"A|أداة spacecraft|مركبة_فضائية unexpectedly|فجأة lost|فقدت communication|الاتصال with|مع Earth|الأرض during|خلال a|أداة scientific|علمية mission|مهمة.",
+"The|ال astronauts|رواد_الفضاء attempted|حاولوا to|أن restore|يستعيدوا the|ال damaged|متضرر communication|اتصال system|نظام using|باستخدام limited|محدودة resources|موارد.",
+"After|بعد several|عدة hours|ساعات they|هم successfully|بنجاح transmitted|أرسلوا a|أداة signal|إشارة confirming|تؤكد their|الخاصة_بهم safety|سلامة."
+],
+translation:"فقدت مركبة فضائية الاتصال بالأرض بصورة مفاجئة خلال مهمة علمية. حاول رواد الفضاء إصلاح نظام الاتصال المتضرر باستخدام موارد محدودة. وبعد عدة ساعات نجحوا في إرسال إشارة تؤكد سلامتهم.",
+questions:[
+["What lost communication?","A spacecraft","A submarine","A train"],
+["What was their mission?","Scientific","Commercial","Military"],
+["What was damaged?","The communication system","The kitchen","The windows"],
+["What resources did they have?","Limited resources","Unlimited resources","No resources"],
+["What did their signal confirm?","Their safety","Their arrival","Their departure"]
+]
+},
+{
+title:"The Library of Tomorrow",
+ar:"مكتبة المستقبل",
+level:"C1",
+cover:"castle",
+scenes:["castle","map","house"],
+parts:[
+"A|أداة visionary|صاحبة_رؤية researcher|باحثة developed|طورت an|أداة innovative|مبتكرة digital|رقمية archive|أرشيف capable|قادر of|على preserving|حفظ endangered|مهددة languages|لغات.",
+"Although|رغم_أن the|ال initiative|مبادرة encountered|واجهت considerable|كبيرة financial|مالية obstacles|عقبات international|دوليون volunteers|متطوعون contributed|ساهموا their|الخاصة_بهم expertise|خبرات.",
+"The|ال project|مشروع ultimately|أخيراً safeguarded|حافظ_على invaluable|لا_تقدر_بثمن cultural|ثقافي heritage|تراث for|لـ future|القادمة generations|أجيال."
+],
+translation:"طورت باحثة صاحبة رؤية أرشيفاً رقمياً مبتكراً قادراً على حفظ اللغات المهددة بالاندثار. ورغم العقبات المالية الكبيرة، ساهم متطوعون دوليون بخبراتهم. وفي النهاية حافظ المشروع على تراث ثقافي لا يقدر بثمن للأجيال القادمة.",
+questions:[
+["What did the researcher develop?","A digital archive","A hospital","A spacecraft"],
+["What did it preserve?","Endangered languages","Ancient coins","Wild animals"],
+["What obstacles did it face?","Financial obstacles","Weather problems","Medical problems"],
+["Who contributed expertise?","International volunteers","Tourists","Children"],
+["Who will benefit?","Future generations","Only researchers","Nobody"]
+]
+}
+);
