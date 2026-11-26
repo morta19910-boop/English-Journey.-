@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Journey</title>
+<style>
+body{background:#f0f5f2;font-family:Arial;margin:0;padding:20px;color:#173d35}
+header{background:#173d35;color:white;padding:25px;border-radius:20px;text-align:center}
+section{background:white;padding:20px;margin-top:15px;border-radius:15px}
+button{background:#198754;color:white;border:0;padding:15px;border-radius:10px;width:100%;margin:6px 0;font-size:17px}
+button:disabled{background:#999}
+p{line-height:1.8}
+</style>
+</head>
+<body>
+<header>
+<h1>English Journey</h1>
+<h2>رحلة الإنجليزية</h2>
+<p>تعلم الإنجليزية قصة بعد قصة</p>
+</header>
+<section id="app"></section>
+<script>
+const stories=[
+["The Four Brothers","Hashim is the oldest brother. Mustafa is younger than Hashim. Ahmed loves books. Abdulrahman is the youngest.","هاشم هو الأخ الأكبر. مصطفى أصغر من هاشم. أحمد يحب الكتب. عبدالرحمن هو الأصغر.",[
+["Who is the oldest?","Hashim","Ahmed","Mustafa"],
+["Who loves books?","Ahmed","Hashim","Mustafa"],
+["Who is the youngest?","Abdulrahman","Ahmed","Hashim"],
+["Brother means:","أخ","أب","صديق"],
+["Youngest means:","الأصغر","الأكبر","الأطول"]
+]],
+["Mustafa at School","Mustafa goes to school. He has a blue bag. He reads a book.","يذهب مصطفى إلى المدرسة. لديه حقيبة زرقاء. يقرأ كتاباً.",[
+["Where does Mustafa go?","School","Market","Home"],
+["What color is his bag?","Blue","Red","Green"],
+["What does he read?","A book","A letter","A map"],
+["School means:","مدرسة","حديقة","منزل"],
+["Bag means:","حقيبة","قلم","كتاب"]
+]]
+];
+let progress=Number(localStorage.getItem("progress")||0);
+const app=document.getElementById("app");
+function home(){
+app.innerHTML="<h2>المستوى التأسيسي</h2>";
+stories.forEach((s,i)=>{
+let b=document.createElement("button");
+b.textContent=(i<=progress?"📖 ":"🔒 ")+s[0];
+b.disabled=i>progress;
+b.onclick=()=>openStory(i);
+app.appendChild(b);
+});
+}
+function openStory(i){
+let s=stories[i];
+app.innerHTML=`<h2 dir="ltr">${s[0]}</h2>
+<p dir="ltr">${s[1]}</p>
+<button onclick="document.getElementById('tr').hidden=false">إظهار الترجمة</button>
+<p id="tr" hidden>${s[2]}</p>
+<button onclick="speak(${i})">🔊 استمع للقصة</button>
+<button onclick="quiz(${i},0,0)">ابدأ الاختبار</button>
+<button onclick="home()">الرئيسية</button>`;
+}
+function speak(i){
+if("speechSynthesis" in window){
+let u=new SpeechSynthesisUtterance(stories[i][1]);
+u.lang="en-US";u.rate=0.8;
+speechSynthesis.speak(u);
+}
+}
+function quiz(i,n,score){
+let questions=stories[i][3];
+if(n===questions.length){
+let pass=score/questions.length>=0.8;
+if(pass){
+progress=Math.max(progress,i+1);
+localStorage.setItem("progress",progress);
+}
+app.innerHTML=`<h2>النتيجة: ${score}/${questions.length}</h2><p>${pass?"أحسنت! تم اجتياز الدرس":"راجع القصة وحاول مرة أخرى"}</p><button onclick="home()">الرئيسية</button><button onclick="openStory(${i})">مراجعة القصة</button>`;
+return;
+}
+let q=questions[n];
+app.innerHTML=`<h3>السؤال ${n+1} من ${questions.length}</h3><h2 dir="ltr">${q[0]}</h2>`;
+q.slice(1).sort(()=>Math.random()-0.5).forEach(a=>{
+let b=document.createElement("button");
+b.textContent=a;
+b.onclick=()=>quiz(i,n+1,score+Number(a===q[1]));
+app.appendChild(b);
+});
+}
+home();
+</script>
+</body>
+</html>
