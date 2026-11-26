@@ -588,3 +588,105 @@ questions:[
 ]
 }
 );
+window.journeyLibrary.stories.push(
+{
+title:"The Little Lantern",
+ar:"الفانوس الصغير",
+level:"A1",
+cover:"house",
+scenes:["house","rain","house"],
+parts:[
+"Ali|علي found|وجد a|أداة small|صغير lantern|فانوس near|قرب his|الخاص_به house|منزل.",
+"One|ذات night|ليلة the|ال electricity|كهرباء stopped|انقطعت and|و Ali|علي used|استخدم the|ال lantern|فانوس.",
+"His|الخاصة_به family|عائلة was|كانت happy|سعيدة because|لأن the|ال room|غرفة became|أصبحت bright|مضيئة."
+],
+translation:"وجد علي فانوساً صغيراً بالقرب من منزله. وفي إحدى الليالي انقطعت الكهرباء فاستخدم الفانوس. كانت عائلته سعيدة لأن الغرفة أصبحت مضيئة.",
+questions:[
+["Who found the lantern?","Ali","Omar","Adam"],
+["What did he find?","A lantern","A book","A phone"],
+["When did the electricity stop?","At night","At noon","In the morning"],
+["What became bright?","The room","The street","The garden"],
+["How did the family feel?","Happy","Angry","Sad"]
+]
+},
+{
+title:"The Hidden Waterfall",
+ar:"الشلال المخفي",
+level:"A2",
+cover:"map",
+scenes:["map","bridge","rain"],
+parts:[
+"Emma|إيما discovered|اكتشفت an|أداة old|قديمة map|خريطة inside|داخل a|أداة wooden|خشبي box|صندوق.",
+"She|هي followed|اتبعت the|ال path|طريق through|عبر the|ال forest|غابة until|حتى she|هي heard|سمعت water|ماء.",
+"Behind|خلف the|ال trees|أشجار she|هي found|وجدت a|أداة beautiful|جميل waterfall|شلال and|و took|التقطت photographs|صوراً."
+],
+translation:"اكتشفت إيما خريطة قديمة داخل صندوق خشبي. اتبعت الطريق عبر الغابة حتى سمعت صوت الماء. وخلف الأشجار وجدت شلالاً جميلاً والتقطت الصور.",
+questions:[
+["What did Emma discover?","A map","A ring","A letter"],
+["Where was the map?","Inside a box","Under a bridge","In a car"],
+["Where did she walk?","Through a forest","Through a city","Through a school"],
+["What did she find?","A waterfall","A castle","A shop"],
+["What did she take?","Photographs","Books","Flowers"]
+]
+},
+{
+title:"The Silent Clock",
+ar:"الساعة الصامتة",
+level:"B1",
+cover:"castle",
+scenes:["castle","house","map"],
+parts:[
+"The|ال ancient|قديمة clock|ساعة in|في the|ال village|قرية suddenly|فجأة stopped|توقفت working|العمل.",
+"A|أداة young|شاب mechanic|ميكانيكي examined|فحص its|الخاصة_بها complicated|معقدة mechanism|آلية and|و discovered|اكتشف a|أداة broken|مكسور spring|نابض.",
+"After|بعد repairing|إصلاح the|ال clock|ساعة he|هو restored|أعاد a|أداة tradition|تقليداً that|الذي had|كان lasted|استمر for|لمدة generations|أجيال."
+],
+translation:"توقفت الساعة القديمة في القرية فجأة عن العمل. فحص ميكانيكي شاب آليتها المعقدة واكتشف نابضاً مكسوراً. وبعد إصلاح الساعة أعاد تقليداً استمر لأجيال.",
+questions:[
+["What stopped working?","A clock","A train","A computer"],
+["Who examined it?","A mechanic","A farmer","A teacher"],
+["What was broken?","A spring","A window","A door"],
+["What did he restore?","A tradition","A building","A road"],
+["How long had the tradition lasted?","Generations","One day","One week"]
+]
+},
+{
+title:"Against the Current",
+ar:"عكس التيار",
+level:"B2",
+cover:"bridge",
+scenes:["bridge","rain","house"],
+parts:[
+"A|أداة determined|مصممة athlete|رياضية faced|واجهت considerable|كبيرة challenges|تحديات during|خلال her|الخاصة_بها preparation|استعداد for|لـ an|أداة international|دولية competition|مسابقة.",
+"Although|رغم she|هي suffered|عانت several|عدة setbacks|انتكاسات she|هي refused|رفضت to|أن abandon|تتخلى_عن her|الخاص_بها ambition|طموح.",
+"Her|الخاص_بها perseverance|إصرار eventually|في_النهاية enabled|مكّن her|إياها to|من achieve|تحقيق an|أداة extraordinary|استثنائي victory|انتصار."
+],
+translation:"واجهت رياضية مصممة تحديات كبيرة أثناء استعدادها لمسابقة دولية. ورغم تعرضها لعدة انتكاسات رفضت التخلي عن طموحها. وفي النهاية مكّنها إصرارها من تحقيق انتصار استثنائي.",
+questions:[
+["Who faced the challenges?","An athlete","A scientist","A musician"],
+["What was she preparing for?","An international competition","A holiday","A meeting"],
+["What did she suffer?","Setbacks","Memory loss","Financial success"],
+["What helped her succeed?","Perseverance","Luck alone","Avoiding practice"],
+["What did she achieve?","An extraordinary victory","A new house","A scholarship"]
+]
+},
+{
+title:"The Paradox of Progress",
+ar:"مفارقة التقدم",
+level:"C2",
+cover:"castle",
+scenes:["castle","map","house"],
+parts:[
+"A|أداة renowned|بارز sociologist|عالم_اجتماع scrutinized|درس_بدقة the|ال paradoxical|المتناقضة consequences|نتائج of|لـ technological|تكنولوجي advancement|تقدم.",
+"Despite|رغم unprecedented|غير_مسبوقة connectivity|قدرة_على_التواصل individuals|أفراد increasingly|بشكل_متزايد experienced|عانوا profound|عميقة isolation|عزلة.",
+"His|الخاص_به analysis|تحليل underscored|أكد the|ال necessity|ضرورة of|لـ reconciling|التوفيق_بين innovation|ابتكار with|مع authentic|حقيقية human|إنسانية interaction|تفاعلات."
+],
+translation:"درس عالم اجتماع بارز بدقة النتائج المتناقضة للتقدم التكنولوجي. ورغم القدرة غير المسبوقة على التواصل، عانى الأفراد بشكل متزايد من العزلة العميقة. وأكد تحليله ضرورة التوفيق بين الابتكار والتفاعلات الإنسانية الحقيقية.",
+questions:[
+["Who conducted the analysis?","A sociologist","An architect","A physician"],
+["What did he scrutinize?","Technological advancement","Agriculture","Ancient literature"],
+["What was unprecedented?","Connectivity","Poverty","Transportation"],
+["What did individuals experience?","Profound isolation","Universal happiness","Physical strength"],
+["What did the analysis emphasize?","Authentic human interaction","Rejecting all technology","Economic competition"]
+]
+}
+);
