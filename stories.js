@@ -75,3 +75,107 @@ window.journeyLibrary.stories.push(
   ]
 }
 );
+
+window.journeyLibrary.stories.push(
+{
+title:"The Midnight Letter",
+ar:"رسالة منتصف الليل",
+level:"A2",
+cover:"house",
+scenes:["house","map","bridge"],
+parts:[
+"At|عند midnight|منتصف_الليل Lina|لينا heard|سمعت a|أداة knock|طرقة at|على the|الـ door|باب. She|هي found|وجدت a|أداة mysterious|غامضة letter|رسالة outside|بالخارج.",
+"The|الـ letter|رسالة contained|احتوت a|أداة drawing|رسماً of|لـ an|أداة old|قديم bridge|جسر. Lina|لينا recognized|تعرفت_على the|الـ place|مكان immediately|فوراً.",
+"The|الـ next|التالي morning|صباح she|هي visited|زارت the|الـ bridge|جسر and|و discovered|اكتشفت a|أداة box|صندوق full|مليء of|بـ family|عائلية photographs|صور."
+],
+translation:"عند منتصف الليل سمعت لينا طرقاً على الباب، فوجدت رسالة غامضة بالخارج. احتوت الرسالة على رسم لجسر قديم تعرفت عليه فوراً. وفي الصباح التالي زارت الجسر واكتشفت صندوقاً مليئاً بالصور العائلية.",
+questions:[
+["When did Lina hear a knock?","At midnight","At noon","At sunrise"],
+["What did she find?","A letter","A phone","A flower"],
+["What was in the drawing?","A bridge","A school","A car"],
+["When did she visit the bridge?","The next morning","At midnight","Next year"],
+["What was inside the box?","Photographs","Gold","Food"]
+]
+},
+{
+title:"The Golden Bird",
+ar:"الطائر الذهبي",
+level:"A1",
+cover:"bird",
+scenes:["bird","house","bird"],
+parts:[
+"Ali|علي saw|رأى a|أداة golden|ذهبي bird|طائر near|قرب his|منزله house|منزل. The|الـ bird|طائر could|كان_يستطيع not|لا fly|يطير.",
+"Ali|علي gave|أعطى it|إياه water|ماء and|و food|طعام. He|هو kept|أبقاه it|إياه warm|دافئاً and|و safe|آمناً.",
+"After|بعد three|ثلاثة days|أيام the|الـ bird|طائر opened|فتح its|الخاص_به wings|جناحين and|و flew|طار away|بعيداً. Ali|علي smiled|ابتسم happily|بسعادة."
+],
+translation:"رأى علي طائراً ذهبياً قرب منزله لم يكن يستطيع الطيران. أعطاه الماء والطعام وأبقاه دافئاً وآمناً. وبعد ثلاثة أيام فتح الطائر جناحيه وطار بعيداً، فابتسم علي بسعادة.",
+questions:[
+["Who found the bird?","Ali","Omar","Adam"],
+["What color was it?","Golden","Black","Blue"],
+["What could it not do?","Fly","Eat","See"],
+["What did Ali give it?","Food and water","Money","Books"],
+["When did it fly away?","After three days","After a year","Immediately"]
+]
+},
+{
+title:"The Castle Mystery",
+ar:"لغز القلعة",
+level:"B1",
+cover:"castle",
+scenes:["castle","map","castle"],
+parts:[
+"Daniel|دانيال explored|استكشف an|أداة abandoned|مهجورة castle|قلعة during|خلال his|الخاص_به summer|الصيف holiday|عطلة. Strange|غريبة symbols|رموز covered|غطت the|الـ ancient|قديمة walls|جدران.",
+"He|هو noticed|لاحظ that|أن the|الـ symbols|رموز formed|شكلت a|أداة pattern|نمطاً. Following|متتبعاً the|الـ clues|أدلة he|هو discovered|اكتشف a|أداة hidden|مخفية chamber|غرفة.",
+"Inside|بالداخل were|كانت historical|تاريخية documents|وثائق describing|تصف the|الـ history|تاريخ of|الـ castle|قلعة. Daniel|دانيال reported|أبلغ his|الخاص_به discovery|اكتشاف to|إلى the|الـ local|محلي museum|متحف."
+],
+translation:"استكشف دانيال قلعة مهجورة خلال عطلته الصيفية. كانت رموز غريبة تغطي الجدران القديمة. لاحظ أنها تشكل نمطاً، فتتبع الأدلة واكتشف غرفة مخفية تحتوي على وثائق تاريخية تصف تاريخ القلعة. أبلغ المتحف المحلي باكتشافه.",
+questions:[
+["What did Daniel explore?","A castle","A ship","A forest"],
+["What covered the walls?","Symbols","Flowers","Pictures"],
+["What did he discover?","A hidden chamber","A river","A garden"],
+["What was inside?","Historical documents","Animals","Weapons"],
+["Who did he inform?","The local museum","His doctor","A farmer"]
+]
+},
+{
+title:"A Message from Mars",
+ar:"رسالة من المريخ",
+level:"B1",
+cover:"map",
+scenes:["house","map","house"],
+parts:[
+"Maya|مايا worked|عملت at|في a|أداة research|أبحاث station|محطة. One|ذات evening|مساء her|الخاص_بها computer|حاسوب received|استقبل an|أداة unusual|غير_معتادة signal|إشارة.",
+"The|الـ signal|إشارة came|جاءت from|من Mars|المريخ. Maya|مايا analyzed|حللت the|الـ data|بيانات with|مع her|الخاص_بها team|فريق.",
+"They|هم discovered|اكتشفوا that|أن an|أداة old|قديم robot|روبوت had|قد restarted|أعاد_التشغيل after|بعد years|سنوات of|من silence|الصمت. Everyone|الجميع celebrated|احتفل the|الـ unexpected|غير_متوقع discovery|اكتشاف."
+],
+translation:"عملت مايا في محطة أبحاث. وفي أحد الأمسيات استقبل حاسوبها إشارة غير معتادة من المريخ. حللت البيانات مع فريقها، فاكتشفوا أن روبوتاً قديماً أعاد تشغيل نفسه بعد سنوات من الصمت. احتفل الجميع بالاكتشاف غير المتوقع.",
+questions:[
+["Where did Maya work?","A research station","A restaurant","A school"],
+["What did she receive?","A signal","A letter","A gift"],
+["Where did it come from?","Mars","Earth","The Moon"],
+["What restarted?","A robot","A car","A telephone"],
+["How did everyone react?","They celebrated","They slept","They cried"]
+]
+},
+{
+title:"The Forgotten Promise",
+ar:"الوعد المنسي",
+level:"B2",
+cover:"house",
+scenes:["house","bridge","house"],
+parts:[
+"Years|سنوات ago|مضت Samuel|صمويل promised|وعد his|الخاص_به childhood|الطفولة friend|صديق that|بأن they|هما would|سوف meet|يلتقيان again|مجدداً beside|بجانب the|الـ river|نهر.",
+"As|مع time|الوقت passed|مر Samuel|صمويل became|أصبح increasingly|بشكل_متزايد busy|مشغولاً and|و gradually|تدريجياً forgot|نسي his|الخاص_به promise|وعد.",
+"An|أداة unexpected|غير_متوقعة photograph|صورة reminded|ذكرت him|إياه of|بـ their|الخاص_بهما friendship|صداقة. He|هو returned|عاد to|إلى the|الـ village|قرية and|و finally|أخيراً fulfilled|أوفى his|الخاص_به promise|وعد."
+],
+translation:"قبل سنوات وعد صمويل صديق طفولته بأن يلتقيا مجدداً بجانب النهر. ومع مرور الوقت أصبح أكثر انشغالاً ونسي وعده تدريجياً. ذكرته صورة غير متوقعة بصداقتهما، فعاد إلى القرية وأوفى بوعده أخيراً.",
+questions:[
+["Who received the promise?","A childhood friend","A teacher","A stranger"],
+["Where would they meet?","Beside the river","At an airport","In a hotel"],
+["Why did Samuel forget?","He became busy","He lost his memory","He moved to Mars"],
+["What reminded him?","A photograph","A song","A newspaper"],
+["What did he finally do?","Fulfilled his promise","Forgot everything","Sold his house"]
+]
+}
+);
+
