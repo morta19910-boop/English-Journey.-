@@ -1,7 +1,422 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><link rel="manifest" href="manifest.json"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>English Journey</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f6ff;color:#192344;font-family:Arial}header,main{max-width:850px;margin:auto;padding:20px}header{display:flex;justify-content:space-between}section{background:linear-gradient(135deg,#242064,#7049e8);color:white;border-radius:28px;padding:30px;margin-bottom:24px}h1{font-size:38px;margin:10px 0}button{border:0;border-radius:14px;padding:14px;background:#e9e7ff;color:#35228c;font-weight:bold;font-size:16px;cursor:pointer;margin:5px}section button{background:#ffdc65}article{background:white;border-radius:20px;padding:20px;margin:14px 0;box-shadow:0 4px 20px #20205012}nav{position:fixed;bottom:0;background:white;width:100%;display:flex;justify-content:center;box-shadow:0 -3px 20px #0001}nav button{font-size:12px;padding:10px;margin:2px}main{padding-bottom:100px}.story{direction:ltr;font-size:21px;line-height:2.5}.word{position:relative;cursor:pointer}.word.active{background:#ffe78a}.tip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#242064;color:white;padding:4px 9px;border-radius:8px;white-space:nowrap;font-size:14px;line-height:1.5;z-index:5}.cover{font-size:70px;text-align:center;background:linear-gradient(135deg,#d8d2ff,#b9f0e3);border-radius:18px;padding:20px}.option{display:block;width:100%;text-align:left}small{color:#64748b}</style><header><b>🌍 English Journey</b><b>⭐ <span id="xp">0</span> XP</b></header><main id="app"></main><nav><button onclick="home()">🏠 الرئيسية</button><button onclick="library()">📚 القصص</button><button onclick="quiz(0,0)">📝 القواعد</button><button onclick="quiz(1,0)">🎮 الألعاب</button><button onclick="progress()">🏆 تقدمي</button></nav><script>
-const app=document.getElementById('app');let xp=Number(localStorage.ejxp||0),done=JSON.parse(localStorage.ejdone||'[]');function reward(n){xp+=n;localStorage.ejxp=xp;document.getElementById('xp').textContent=xp}reward(0);
-const stories=[{title:'The Secret of the Forest',icon:'🌳',text:'One morning, Adam walked into a quiet forest near his village. He wanted to discover something new. The sun was shining through the trees, and the birds were singing happily. Suddenly, Adam heard a strange sound behind a large tree. He moved slowly and found a small bird with an injured wing. The bird could not fly. Adam carefully picked it up and carried it home. He gave it water and food every day. After two weeks, the bird became strong again. Adam returned to the forest and opened his hands. The bird flew into the blue sky. Adam smiled because he understood that kindness was more valuable than any treasure.',q:'What did Adam find?',a:['An injured bird','A golden box','A lost dog'],c:0},{title:'The Lost Treasure',icon:'🏝️',text:'Sara lived in a small town beside the sea. One afternoon, she discovered an old map inside a wooden box. The map showed a mysterious island and a large red cross. Sara decided to investigate the secret with her brother. They borrowed a small boat and travelled across the calm water. When they arrived, they followed a narrow path through the island. Suddenly, dark clouds appeared above them. They hurried towards a cave to escape the rain. Inside the cave, they found a beautiful wooden chest. However, it contained no gold or diamonds. Instead, there were letters describing their grandfather’s adventures. Sara realized that the greatest treasure was not money, but the memories and wisdom of the people we love.',q:'What was inside the chest?',a:['Gold','Letters','Diamonds'],c:1}];
-const dict={one:'واحد',morning:'صباح',walked:'مشى',into:'إلى داخل',quiet:'هادئ',forest:'غابة',near:'قرب',his:'له',village:'قرية',he:'هو',wanted:'أراد',to:'إلى',discover:'يكتشف',something:'شيء',new:'جديد',the:'الـ',sun:'شمس',was:'كان',shining:'تشرق',through:'عبر',trees:'أشجار',and:'و',birds:'طيور',were:'كانت',singing:'تغني',happily:'بسعادة',suddenly:'فجأة',heard:'سمع',a:'أداة تنكير',strange:'غريب',sound:'صوت',behind:'خلف',large:'كبير',tree:'شجرة',moved:'تحرك',slowly:'ببطء',found:'وجد',small:'صغير',bird:'طائر',with:'مع',an:'أداة تنكير',injured:'مصاب',wing:'جناح',could:'استطاع',not:'لا',fly:'يطير',carefully:'بحذر',picked:'التقط',it:'إياه',up:'إلى أعلى',carried:'حمل',home:'المنزل',gave:'أعطى',water:'ماء',food:'طعام',every:'كل',day:'يوم',after:'بعد',two:'اثنان',weeks:'أسابيع',became:'أصبح',strong:'قوي',again:'مجدداً',returned:'عاد',opened:'فتح',hands:'يدين',flew:'طار',blue:'أزرق',sky:'سماء',smiled:'ابتسم',because:'لأن',understood:'فهم',that:'أن',kindness:'اللطف',more:'أكثر',valuable:'قيمة',than:'من',any:'أي',treasure:'كنز',lived:'عاشت',in:'في',town:'مدينة',beside:'بجانب',sea:'بحر',afternoon:'بعد الظهر',she:'هي',discovered:'اكتشفت',old:'قديم',map:'خريطة',inside:'داخل',wooden:'خشبي',box:'صندوق',showed:'أظهر',mysterious:'غامض',island:'جزيرة',red:'أحمر',cross:'علامة تقاطع',decided:'قررت',investigate:'تستكشف',secret:'سر',her:'لها',brother:'أخ',they:'هم',borrowed:'استعاروا',boat:'قارب',travelled:'سافروا',across:'عبر',calm:'هادئ',when:'عندما',arrived:'وصلوا',followed:'تبعوا',narrow:'ضيق',path:'طريق',dark:'داكن',clouds:'غيوم',appeared:'ظهرت',above:'فوق',them:'هم',hurried:'أسرعوا',towards:'نحو',cave:'كهف',escape:'يهرب',rain:'مطر',beautiful:'جميل',chest:'صندوق',however:'لكن',contained:'احتوى',no:'لا',gold:'ذهب',or:'أو',diamonds:'ألماس',instead:'بدلاً من ذلك',there:'هناك',letters:'رسائل',describing:'تصف',their:'لهم',grandfather:'جد',adventures:'مغامرات',realized:'أدركت',greatest:'أعظم',money:'مال',but:'لكن',memories:'ذكريات',wisdom:'حكمة',of:'من',people:'الناس',we:'نحن',love:'نحب',adam:'آدم',sara:'سارة'};
-function home(){app.innerHTML='<section><small style="color:white">YOUR ENGLISH ADVENTURE</small><h1 dir="ltr">Explore. Learn. Grow.</h1><p>تعلم الإنجليزية بالقصص والمغامرات والتحديات اليومية</p><button onclick="library()">ابدأ رحلتك ←</button></section><article onclick="library()">📚 مكتبة القصص التفاعلية</article><article onclick="quiz(0,0)">📝 تحدي القواعد</article><article onclick="quiz(1,0)">🎮 لعبة المفردات</article>'}function library(){app.innerHTML='<h2>مكتبة القصص</h2>'+stories.map((s,i)=>`<article onclick="read(${i})"><div class="cover">${s.icon}</div><h3 dir="ltr">${s.title}</h3><small>${s.text.split(' ').length} كلمة • ${done.includes(i)?'مكتملة':'ابدأ القراءة'}</small></article>`).join('')}
-function speak(t){if('speechSynthesis' in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;speechSynthesis.speak(u)}}function read(i){let s=stories[i];app.innerHTML=`<button onclick="library()">رجوع</button><div class="cover">${s.icon}</div><h2 dir="ltr">${s.title}</h2><button onclick="speak(stories[${i}].text)">🔊 استمع للقصة</button><p>اضغط على أي كلمة لمعرفة معناها</p><article class="story">${s.text.split(' ').map(w=>`<span class="word" onclick="translateWord(this)">${w}</span>`).join(' ')}</article><article dir="ltr"><h3>${s.q}</h3>${s.a.map((a,j)=>`<button class="option" onclick="answerStory(${i},${j},this)">${a}</button>`).join('')}</article>`}function translateWord(el){document.querySelectorAll('.tip').forEach(t=>t.remove());document.querySelectorAll('.active').forEach(t=>t.classList.remove('active'));let w=el.textContent.toLowerCase().replace(/[^a-z]/g,'');let t=document.createElement('span');t.className='tip';t.textContent=dict[w]||dict[w.replace(/s$/,'')]||'ترجمة غير متاحة';el.classList.add('active');el.append(t);speak(w)}function answerStory(i,j,b){if(j===stories[i].c){b.style.background='#b8f3c9';if(!done.includes(i)){done.push(i);localStorage.ejdone=JSON.stringify(done);reward(20)}b.textContent+=' ✓'}else{b.style.background='#ffd1d1'}}
-const questions=[[['She ___ to school every day.',['go','goes','going'],1],['They ___ playing now.',['is','am','are'],2],['I ___ a book yesterday.',['read','reads','reading'],0],['He has ___ apple.',['a','an','the'],1]],[['ما معنى Courage?',['شجاعة','خوف','حزن'],0],['ما معنى Treasure?',['طريق','كنز','سماء'],1],['اختر عكس Big',['Tall','Small','Long'],1],['ما معنى Wisdom?',['حكمة','ماء','غابة'],0]]];function quiz(k,i){if(i>=questions[k].length){app.innerHTML='<section><h1>🏆 أحسنت!</h1><p>أنهيت التحدي</p><button onclick="home()">الرئيسية</button></section>';return}let q=questions[k][i];app.innerHTML=`<h2>${k?'🎮 لعبة الكلمات':'📝 اختبار القواعد'}</h2><small>${i+1} / ${questions[k].length}</small><article><h2 dir="auto">${q[0]}</h2>${q[1].map((a,j)=>`<button class="option" onclick="check(${k},${i},${j},this)">${a}</button>`).join('')}<p id="feedback"></p><button id="next" hidden onclick="quiz(${k},${i+1})">التالي ←</button></article>`}function check(k,i,j,b){if(j===questions[k][i][2]){reward(10);b.style.background='#b8f3c9';document.getElementById('feedback').textContent='إجابة صحيحة! +10 XP';document.querySelectorAll('.option').forEach(x=>x.disabled=true);document.getElementById('next').hidden=false}else{b.style.background='#ffd1d1';document.getElementById('feedback').textContent='حاول مرة أخرى'}}function progress(){app.innerHTML=`<section><h1>🏆 ${xp} XP</h1><p>المستوى ${1+Math.floor(xp/100)}</p></section><article>القصص المكتملة: ${done.length} / ${stories.length}</article>`}home();</script></html>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="manifest.json">
+<title>English Journey 2.0</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f2f6f1;color:#173d35;font-family:Arial,sans-serif}
+button{font:inherit;cursor:pointer;border:0;border-radius:16px;padding:15px;background:#087f65;color:white}
+h1,h2,h3{margin:12px 0}
+p{line-height:1.9}
+header{padding:20px;background:#103e35;color:white;display:flex;justify-content:space-between;align-items:center}
+main{padding:18px;max-width:800px;margin:auto;padding-bottom:110px}
+.hero{background:linear-gradient(150deg,#103e35,#087f65);color:white;padding:25px;border-radius:30px;text-align:center;box-shadow:0 12px 30px #123d3530}
+.hero h1{font-size:36px}
+.gold{background:#ffd369;color:#173d35;font-weight:bold;width:100%}
+.scene{border-radius:22px;overflow:hidden;background:#bde7da}
+.scene svg{display:block;width:100%;height:auto}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:white;padding:20px 10px;border-radius:22px;text-align:center;box-shadow:0 5px 18px #123d3510;cursor:pointer}
+.tile span{font-size:40px;display:block;margin-bottom:12px}
+.card{background:white;border-radius:24px;padding:20px;margin:15px 0;box-shadow:0 5px 20px #123d3510}
+nav{position:fixed;bottom:0;left:0;right:0;background:white;display:flex;justify-content:space-around;padding:12px 2px 20px;box-shadow:0 -4px 25px #123d3515;z-index:10}
+nav button{background:white;color:#087f65;padding:5px;font-size:12px}
+nav b{display:block;font-size:24px;margin-bottom:5px}
+.en{direction:ltr;text-align:left;font-size:21px;line-height:2.8}
+.word{display:inline-block;position:relative;cursor:pointer;padding:0 2px}
+.word.active{background:#fff0ba;border-radius:5px;color:#087f65}
+.tip{position:absolute;bottom:85%;left:50%;transform:translateX(-50%);background:#103e35;color:white;padding:5px 9px;border-radius:8px;font-size:14px;line-height:1.5;white-space:nowrap;z-index:5}
+.option{display:block;width:100%;margin:8px 0;background:#edf5ef;color:#173d35;text-align:left;direction:ltr}
+.full{width:100%;margin:6px 0}
+small{color:#688279}
+progress{width:100%;accent-color:#087f65}
+#message{padding:10px;font-weight:bold}
+.chip{display:inline-block;background:#e1eee5;color:#173d35;padding:10px;margin:4px;border-radius:10px}
+</style>
+</head>
+<body>
+<header>
+<strong>English Journey</strong>
+<span>⭐ <b id="points">0</b></span>
+</header>
+<main id="app"></main>
+<nav>
+<button onclick="home()"><b>🏠</b>الرئيسية</button>
+<button onclick="library()"><b>📚</b>القصص</button>
+<button onclick="games()"><b>🎮</b>الألعاب</button>
+<button onclick="grammar()"><b>🎓</b>القواعد</button>
+<button onclick="profile()"><b>🏆</b>إنجازاتي</button>
+</nav>
+<script>
+const app=document.getElementById('app');
+let points=Number(localStorage.getItem('ej2points')||0);
+let saved=JSON.parse(localStorage.getItem('ej2words')||'{}');
+let unlocked=Number(localStorage.getItem('ej2unlocked')||0);
+let activeStory=0;
+function update(){
+document.getElementById('points').textContent=points;
+localStorage.setItem('ej2points',points);
+}
+function reward(n){points+=n;update()}
+function tile(icon,title,action){
+return `<div class="tile" onclick="${action}"><span>${icon}</span><b>${title}</b></div>`;
+}
+function art(kind){
+let objects={
+castle:`<rect x="240" y="115" width="120" height="100" rx="5" fill="#d5b97d"/><rect x="220" y="85" width="40" height="130" fill="#f0d99b"/><rect x="340" y="85" width="40" height="130" fill="#f0d99b"/><path d="M210 85L240 40L270 85M330 85L360 40L390 85" fill="#9b6244"/><path d="M280 215V175Q300 145 320 175V215" fill="#72503a"/>`,
+map:`<rect x="245" y="190" width="100" height="55" rx="8" fill="#84502d"/><rect x="240" y="182" width="110" height="20" rx="8" fill="#d9a34b"/><rect x="288" y="195" width="15" height="20" fill="#ffdf79"/><path d="M90 180L165 160L195 210L120 230Z" fill="#fff0b5" stroke="#a88045" stroke-width="3"/><path d="M115 195L145 180L170 200" stroke="#bc7044" stroke-width="4" stroke-dasharray="6 5" fill="none"/>`,
+bird:`<ellipse cx="330" cy="175" rx="28" ry="19" fill="#f4b34f"/><circle cx="350" cy="158" r="15" fill="#f9d475"/><circle cx="355" cy="154" r="3" fill="#222"/><path d="M364 158L379 164L364 169" fill="#e58039"/><ellipse cx="325" cy="177" rx="18" ry="10" fill="#ad773b"/>`,
+bridge:`<path d="M0 220Q180 155 300 235T600 200V300H0Z" fill="#65bde0"/><path d="M150 220Q300 90 450 220" stroke="#7b4b32" stroke-width="25" fill="none"/><path d="M150 190Q300 60 450 190" stroke="#b58350" stroke-width="8" fill="none"/>`,
+rain:`<path d="M0 220Q200 150 400 220T600 200V300H0Z" fill="#74b8d9"/><g fill="#7891a7"><ellipse cx="120" cy="55" rx="85" ry="28"/><ellipse cx="300" cy="45" rx="100" ry="30"/><ellipse cx="490" cy="60" rx="90" ry="28"/></g><path d="M70 95L55 125M140 95L125 125M240 90L225 120M340 90L325 120M440 95L425 125M530 95L515 125" stroke="#568cbd" stroke-width="5"/>`,
+cat:`<ellipse cx="325" cy="220" rx="36" ry="25" fill="#e7a45b"/><circle cx="345" cy="190" r="25" fill="#efb76c"/><path d="M325 177L325 155L340 169M350 169L367 155L367 182" fill="#efb76c"/><circle cx="337" cy="189" r="3" fill="#333"/><circle cx="353" cy="189" r="3" fill="#333"/><path d="M290 220Q260 190 275 175" stroke="#e7a45b" stroke-width="10" fill="none"/>`,
+house:`<rect x="230" y="125" width="140" height="105" rx="5" fill="#f5d69a"/><path d="M210 130L300 60L390 130Z" fill="#b65d46"/><rect x="280" y="170" width="40" height="60" fill="#885a3c"/><rect x="245" y="145" width="25" height="30" fill="#8ed5ee"/><rect x="330" y="145" width="25" height="30" fill="#8ed5ee"/>`
+};
+let trees=[40,95,510,565].map(x=>`<rect x="${x-6}" y="145" width="12" height="95" fill="#8a6846"/><circle cx="${x}" cy="130" r="35" fill="#23846b"/><circle cx="${x-12}" cy="110" r="22" fill="#4ba477"/>`).join('');
+return `<div class="scene"><svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="300" fill="#a7dce9"/><circle cx="470" cy="60" r="38" fill="#ffe19a"/><path d="M0 185L140 45L270 185L400 30L600 185" fill="#79a9a2"/><path d="M0 200Q150 145 300 200T600 180V300H0Z" fill="#8ac88c"/><path d="M250 300Q360 245 300 200L320 195Q450 250 390 300Z" fill="#e8c88e"/>${trees}${objects[kind]||objects.castle}</svg></div>`;
+}
+function home(){
+app.innerHTML=`
+<div class="hero">
+${art('castle')}
+<h1>English Journey</h1>
+<h2>عالم المغامرات الإنجليزية</h2>
+<p>رحلتك نحو إتقان الإنجليزية تبدأ هنا. اقرأ واستكشف والعب وتعلم.</p>
+<button class="gold" onclick="library()">ابدأ مغامرتك الآن ←</button>
+</div>
+<h2>اختر مغامرتك</h2>
+<div class="grid">
+${tile('📚','عالم القصص','library()')}
+${tile('🎮','عالم الألعاب','games()')}
+${tile('🎓','أكاديمية القواعد','grammar()')}
+${tile('🎧','تحدي الاستماع','listenGame()')}
+${tile('📖','قاموسي الشخصي','dictionary()')}
+${tile('🏆','الإنجازات','profile()')}
+</div>`;
+}
+const stories=[
+{
+title:'The Lost Treasure',
+ar:'الكنز المفقود',
+cover:'map',
+scenes:['map','bird','house'],
+parts:[
+`One|ذات day|يوم Hashim|هاشم found|وجد an|أداة old|قديمة map|خريطة inside|داخل a|أداة wooden|خشبي box|صندوق in|في his|الخاص_به grandfather's|جده room|غرفة. He|هو decided|قرر to|أن follow|يتبع the|الـ map|خريطة with|مع his|الخاص_به younger|الأصغر brother|أخ Mustafa|مصطفى. They|هما carried|حملا some|بعض water|الماء and|و bread|الخبز before|قبل leaving|مغادرة their|الخاص_بهما house|المنزل.`,
+`The|الـ forest|غابة was|كانت beautiful|جميلة but|لكن very|جداً quiet|هادئة. Suddenly|فجأة they|هما heard|سمعا a|أداة strange|غريب sound|صوت near|بالقرب_من the|الـ river|نهر. A|أداة small|صغير bird|طائر was|كان trapped|عالقاً between|بين two|اثنين branches|أغصان. Hashim|هاشم carefully|بحذر helped|ساعد the|الـ bird|طائر while|بينما Mustafa|مصطفى waited|انتظر beside|بجانب him|إياه. Then|ثم they|هما crossed|عبرا an|أداة ancient|قديم bridge|جسر and|و discovered|اكتشفا a|أداة hidden|مخفي path|ممر.`,
+`At|عند the|الـ end|نهاية of|من the|الـ path|ممر they|هما met|قابلا an|أداة elderly|مسناً man|رجل who|الذي needed|احتاج help|مساعدة. They|هما shared|شاركا their|الخاص_بهما food|الطعام and|و carried|حملا his|الخاص_به heavy|ثقيلة bags|حقائب. The|الـ man|رجل smiled|ابتسم and|و explained|شرح that|أن kindness|اللطف was|كان the|الـ greatest|أعظم treasure|كنز. The|الـ brothers|الأخوان returned|عادا home|للمنزل feeling|يشعران happy|بالسعادة because|لأن they|هما had|قد learned|تعلما something|شيئاً more|أكثر valuable|قيمة than|من gold|الذهب.`
+],
+translation:'ذات يوم وجد هاشم خريطة قديمة في صندوق خشبي بغرفة جده. قرر اتباعها مع أخيه مصطفى. حملا الماء والخبز وانطلقا. وفي الغابة سمعا صوت طائر عالق فساعداه، ثم عبرا جسراً قديماً واكتشفا ممراً مخفياً. وفي نهايته قابلا رجلاً مسناً يحتاج إلى المساعدة، فشاركا معه الطعام وحملا حقائبه. أخبرهما أن اللطف أعظم كنز، فعادا إلى المنزل وقد تعلما شيئاً أثمن من الذهب.',
+questions:[
+['Who found the map?','Hashim','Ahmed','Ali'],
+['Where was the map?','In a wooden box','In a river','At school'],
+['What animal needed help?','A bird','A lion','A horse'],
+['Who needed help at the end?','An elderly man','A teacher','A doctor'],
+['What was the greatest treasure?','Kindness','Money','Silver']
+]
+},
+{
+title:'The Brave Brother',
+ar:'الأخ الشجاع',
+cover:'cat',
+scenes:['rain','cat','house'],
+parts:[
+`Ahmed|أحمد lived|عاش in|في a|أداة small|صغيرة village|قرية with|مع his|الخاص_به family|عائلة. Every|كل morning|صباح he|هو walked|مشى to|إلى school|المدرسة with|مع his|الخاص_به brother|أخ Abdulrahman|عبدالرحمن. One|ذات afternoon|ظهيرة dark|داكنة clouds|غيوم covered|غطت the|الـ sky|سماء and|و heavy|غزيرة rain|أمطار began|بدأت to|أن fall|تهطل. The|الـ boys|الولدان hurried|أسرعا towards|نحو their|الخاص_بهما home|المنزل.`,
+`Near|بالقرب_من a|أداة large|كبيرة tree|شجرة they|هما heard|سمعا a|أداة frightened|خائفة cat|قطة crying|تبكي. The|الـ water|ماء was|كان rising|يرتفع quickly|بسرعة around|حول the|الـ animal|حيوان. Ahmed|أحمد knew|عرف that|أن entering|دخول the|الـ water|ماء was|كان dangerous|خطيراً. He|هو asked|طلب his|الخاص_به brother|أخ to|أن call|ينادي an|أداة adult|بالغ for|من_أجل help|المساعدة. A|أداة farmer|مزارع arrived|وصل with|مع a|أداة long|طويلة ladder|سلم.`,
+`Together|معاً they|هم rescued|أنقذوا the|الـ little|صغيرة cat|قطة safely|بأمان. Abdulrahman|عبدالرحمن wrapped|لف the|الـ animal|حيوان in|في a|أداة warm|دافئة towel|منشفة. Their|الخاص_بهما mother|أم welcomed|رحبت them|بهم and|و prepared|أعدت some|بعض food|الطعام. Ahmed|أحمد realized|أدرك that|أن true|الحقيقية courage|شجاعة means|تعني making|اتخاذ wise|حكيمة decisions|قرارات not|وليس taking|المخاطرة unnecessary|غير_ضرورية risks|مخاطر. The|الـ brothers|الأخوان promised|وعدا to|أن always|دائماً protect|يحميا each|بعضهما other|الآخر and|و help|يساعدا those|أولئك in|في need|حاجة.`
+],
+translation:'عاش أحمد مع أسرته في قرية صغيرة. كان يذهب إلى المدرسة مع أخيه عبدالرحمن. وفي أحد الأيام هطلت أمطار غزيرة، فسمعا قطة خائفة قرب شجرة. أدرك أحمد خطورة دخول الماء وطلب من أخيه استدعاء شخص بالغ. وصل مزارع يحمل سلماً طويلاً فأنقذوا القطة بأمان. لفها عبدالرحمن بمنشفة دافئة. وتعلم الأخوان أن الشجاعة الحقيقية تعني اتخاذ قرارات حكيمة ومساعدة المحتاجين دون مخاطرة غير ضرورية.',
+questions:[
+['Where did Ahmed live?','In a village','In a castle','On a ship'],
+['What covered the sky?','Dark clouds','Stars','Birds'],
+['Which animal was frightened?','A cat','A dog','A horse'],
+['Who brought a ladder?','A farmer','A student','A pilot'],
+['What does true courage mean?','Making wise decisions','Taking unnecessary risks','Ignoring others']
+]
+}
+];
+function library(){
+app.innerHTML='<h2>📚 عالم القصص</h2><p>اقرأ واستكشف وتعلم كلمات جديدة.</p>';
+stories.forEach((s,i)=>{
+app.innerHTML+=`<div class="card">
+${art(s.cover)}
+<h2 dir="ltr">${s.title}</h2><p>${s.ar}</p>
+<button class="full" ${i>unlocked?'disabled style="opacity:.5"':''} onclick="readStory(${i})">${i>unlocked?'🔒 أكمل القصة السابقة':'ابدأ القراءة'}</button></div>`;
+});
+}
+function readStory(i){
+if(i>unlocked)return;
+activeStory=i;
+let s=stories[i];
+app.innerHTML=`<button onclick="library()">← القصص</button>
+<h2 dir="ltr">${s.title}</h2>
+<p>اضغط على أي كلمة لمعرفة معناها.</p>`;
+s.parts.forEach((part,j)=>{
+let html=part.split(/\s+/).map((pair)=>{
+let [w,a]=pair.split('|');
+let punctuation='';
+if(a.endsWith('.')){a=a.slice(0,-1);punctuation='.'}
+return `<span class="word" data-word="${w}" data-meaning="${a.replaceAll('_',' ')}" onclick="translateWord(this)">${w}${punctuation}</span>`;
+}).join(' ');
+app.innerHTML+=`<div class="card">${art(s.scenes[j])}<div class="en">${html}</div></div>`;
+});
+app.innerHTML+=`<button class="full" onclick="speakStory()">🔊 استمع للقصة</button>
+<button class="full" onclick="document.getElementById('translation').hidden=!document.getElementById('translation').hidden">إظهار أو إخفاء الترجمة</button>
+<p id="translation" hidden>${s.translation}</p>
+<button class="gold" onclick="startQuiz(stories[${i}].questions,${i})">ابدأ اختبار القصة</button>`;
+}
+function translateWord(el){
+let wasActive=el.classList.contains('active');
+document.querySelectorAll('.word.active').forEach(w=>{
+w.classList.remove('active');
+w.querySelector('.tip')?.remove();
+});
+if(wasActive)return;
+el.classList.add('active');
+let tip=document.createElement('span');
+tip.className='tip';
+tip.textContent=el.dataset.meaning;
+el.appendChild(tip);
+let r=tip.getBoundingClientRect();
+if(r.left<5)tip.style.marginLeft=(5-r.left)+'px';
+if(r.right>innerWidth-5)tip.style.marginLeft=(innerWidth-5-r.right)+'px';
+saved[el.dataset.word.toLowerCase()]=el.dataset.meaning;
+localStorage.setItem('ej2words',JSON.stringify(saved));
+}
+function speak(text){
+if(!('speechSynthesis' in window)){
+alert('النطق غير متاح على هذا الجهاز');return;
+}
+speechSynthesis.cancel();
+let u=new SpeechSynthesisUtterance(text);
+u.lang='en-US';u.rate=.8;
+speechSynthesis.speak(u);
+}
+function speakStory(){
+speak(stories[activeStory].parts.map(p=>p.split(/\s+/).map(t=>t.split('|')[0]+(t.endsWith('.')?'.':'')).join(' ')).join(' '));
+}
+let questions=[],qIndex=0,score=0,storyQuiz=-1,answered=false;
+function shuffle(a){
+let b=[...a];
+for(let i=b.length-1;i>0;i--){
+let j=Math.floor(Math.random()*(i+1));
+[b[i],b[j]]=[b[j],b[i]];
+}
+return b;
+}
+function startQuiz(q,s=-1){
+questions=q;qIndex=0;score=0;storyQuiz=s;showQuestion();
+}
+function showQuestion(){
+if(qIndex>=questions.length){
+let percent=Math.round(score/questions.length*100);
+if(percent>=80){
+reward(30);
+if(storyQuiz>=0){
+unlocked=Math.max(unlocked,storyQuiz+1);
+localStorage.setItem('ej2unlocked',unlocked);
+}
+}
+app.innerHTML=`<div class="card" style="text-align:center">
+<div style="font-size:80px">${percent>=80?'🏆':'💪'}</div>
+<h1>${percent}%</h1><h2>${percent>=80?'أحسنت!':'حاول مرة أخرى'}</h2>
+<p>الإجابات الصحيحة ${score} من ${questions.length}</p>
+<button class="full" onclick="startQuiz(questions,storyQuiz)">إعادة الاختبار</button>
+<button class="full" onclick="library()">عالم القصص</button>
+<button class="full" onclick="home()">الرئيسية</button></div>`;
+return;
+}
+answered=false;
+let q=questions[qIndex];
+app.innerHTML=`<div class="card">
+<small>السؤال ${qIndex+1} من ${questions.length}</small>
+<progress value="${qIndex}" max="${questions.length}"></progress>
+<h2 dir="ltr">${q[0]}</h2>
+<div id="options"></div>
+<div id="message"></div>
+<button id="next" class="full" hidden onclick="qIndex++;showQuestion()">التالي ←</button></div>`;
+shuffle(q.slice(1)).forEach(a=>{
+let b=document.createElement('button');
+b.className='option';b.textContent=a;
+b.onclick=()=>checkAnswer(b,a,q[1]);
+document.getElementById('options').appendChild(b);
+});
+}
+function checkAnswer(b,a,correct){
+if(answered)return;
+answered=true;
+let ok=a===correct;
+if(ok)score++;
+b.style.background=ok?'#b9efcb':'#ffc8c8';
+document.getElementById('message').textContent=ok?'🎉 إجابة صحيحة!':'الإجابة الصحيحة: '+correct;
+document.getElementById('next').hidden=false;
+}
+const grammarSets=[
+{title:'Present Simple',ar:'المضارع البسيط',rule:'نضيف s أو es للفعل مع he و she و it.',q:[
+['She ___ to school.','goes','go','going'],
+['They ___ football.','play','plays','playing'],
+['He ___ English.','studies','study','studying'],
+['I ___ water.','drink','drinks','drinking'],
+['The sun ___ in the east.','rises','rise','rising']]},
+{title:'Past Simple',ar:'الماضي البسيط',rule:'نستخدم التصريف الثاني للفعل للتعبير عن حدث انتهى في الماضي.',q:[
+['Yesterday I ___ home.','went','go','goes'],
+['She ___ a book yesterday.','read','reads','reading'],
+['They ___ football yesterday.','played','play','plays'],
+['He ___ an apple yesterday.','ate','eat','eats'],
+['We ___ happy yesterday.','were','are','is']]},
+{title:'Prepositions',ar:'حروف الجر',rule:'نستخدم in للداخل، on للسطح، at للمكان أو الوقت المحدد.',q:[
+['The book is ___ the table.','on','at','from'],
+['She lives ___ Sudan.','in','on','at'],
+['School starts ___ eight.','at','on','from'],
+['The cat is ___ the box.','in','at','to'],
+['We go to school ___ Monday.','on','in','at']]}
+];
+function grammar(){
+app.innerHTML='<h2>🎓 أكاديمية القواعد</h2>';
+grammarSets.forEach((g,i)=>{
+app.innerHTML+=`<div class="card"><h2>${g.title}</h2><h3>${g.ar}</h3><p>${g.rule}</p><button class="full" onclick="startQuiz(grammarSets[${i}].q)">ابدأ الاختبار</button></div>`;
+});
+}
+function games(){
+app.innerHTML=`<h2>🎮 عالم الألعاب</h2>
+<div class="grid">
+${tile('🧩','تركيب الكلمات','wordGame()')}
+${tile('🌉','جسر القواعد','startQuiz(grammarSets[0].q)')}
+${tile('🧠','لعبة الذاكرة','memoryGame()')}
+${tile('🎧','تحدي الاستماع','listenGame()')}
+${tile('🏰','قلعة الأزمنة','startQuiz(grammarSets[1].q)')}
+${tile('🔍','المحقق اللغوي','detective()')}
+${tile('📝','ترتيب الجمل','sentenceGame()')}
+${tile('💎','البحث عن الكنز','startQuiz(grammarSets[2].q)')}
+</div>`;
+}
+let words=[
+['APPLE','تفاحة'],['SCHOOL','مدرسة'],
+['TREASURE','كنز'],['FLOWER','زهرة'],
+['FRIEND','صديق'],['WATER','ماء']
+];
+let currentWord='',typed='';
+function wordGame(){
+let w=words[Math.floor(Math.random()*words.length)];
+currentWord=w[0];typed='';
+app.innerHTML=`<div class="card"><h2>🧩 تركيب الكلمات</h2><p>رتب الحروف لتكوين كلمة: ${w[1]}</p>
+<h1 id="typed" dir="ltr">---</h1>
+<div id="letters" dir="ltr"></div>
+<p id="message"></p>
+<button class="full" onclick="wordGame()">كلمة جديدة</button></div>`;
+shuffle(currentWord.split('')).forEach(l=>{
+let b=document.createElement('button');
+b.className='chip';b.textContent=l;
+b.onclick=()=>{
+typed+=l;b.disabled=true;b.style.opacity='.4';
+document.getElementById('typed').textContent=typed;
+if(typed.length===currentWord.length){
+let ok=typed===currentWord;
+if(ok)reward(10);
+document.getElementById('message').textContent=ok?'🎉 أحسنت! +10':'حاول مرة أخرى. الكلمة: '+currentWord;
+}
+};
+document.getElementById('letters').appendChild(b);
+});
+}
+let firstCard=null,matched=0,lock=false;
+function memoryGame(){
+firstCard=null;matched=0;lock=false;
+let cards=shuffle(words.slice(0,4).flatMap((w,i)=>[{id:i,text:w[0]},{id:i,text:w[1]}]));
+app.innerHTML='<h2>🧠 لعبة الذاكرة</h2><p>طابق الكلمة الإنجليزية مع معناها.</p><div class="grid" id="memory"></div><p id="message"></p>';
+cards.forEach(c=>{
+let b=document.createElement('button');
+b.style.minHeight='90px';b.textContent='❓';
+b.onclick=()=>{
+if(lock||b===firstCard?.b||b.disabled)return;
+b.textContent=c.text;
+if(!firstCard){firstCard={b,c};return}
+let old=firstCard;firstCard=null;
+if(old.c.id===c.id){
+b.disabled=true;old.b.disabled=true;
+b.style.background=old.b.style.background='#d49c22';
+matched++;
+if(matched===4){reward(20);document.getElementById('message').textContent='🏆 فزت! +20 نقطة'}
+}else{
+lock=true;
+setTimeout(()=>{b.textContent=old.b.textContent='❓';lock=false},900);
+}
+};
+document.getElementById('memory').appendChild(b);
+});
+}
+function listenGame(){
+let w=words[Math.floor(Math.random()*words.length)];
+app.innerHTML=`<div class="card"><h2>🎧 تحدي الاستماع</h2>
+<button class="full" onclick="speak('${w[0]}')">🔊 استمع للكلمة</button>
+<p>اختر المعنى الصحيح</p><div id="listenOptions"></div><p id="message"></p>
+<button class="full" onclick="listenGame()">كلمة أخرى</button></div>`;
+let choices=shuffle([w,...shuffle(words.filter(x=>x!==w)).slice(0,2)]);
+let done=false;
+choices.forEach(x=>{
+let b=document.createElement('button');b.className='option';b.textContent=x[1];
+b.onclick=()=>{
+if(done)return;done=true;
+let ok=x===w;if(ok)reward(10);
+document.getElementById('message').textContent=ok?'🎉 ممتاز!':'الصحيح: '+w[1];
+};document.getElementById('listenOptions').appendChild(b);
+});
+}
+function detective(){
+startQuiz([
+['Correct: She go to school.','She goes to school.','She going to school.','She gone to school.'],
+['Correct: They is happy.','They are happy.','They am happy.','They be happy.'],
+['Correct: He eat yesterday.','He ate yesterday.','He eats yesterday.','He eating yesterday.']
+]);
+}
+function sentenceGame(){
+let sets=[
+['هي تذهب إلى المدرسة كل يوم','She goes to school every day'],
+['أنا أحب قراءة الكتب','I love reading books'],
+['هم يلعبون كرة القدم','They play football']
+];
+let s=sets[Math.floor(Math.random()*sets.length)];
+let selected=[];
+app.innerHTML=`<div class="card"><h2>📝 ترتيب الجمل</h2><p>${s[0]}</p>
+<h3 id="sentence" dir="ltr"></h3><div id="sentenceWords" dir="ltr"></div>
+<p id="message"></p><button class="full" onclick="sentenceGame()">تحدٍ جديد</button></div>`;
+shuffle(s[1].split(' ')).forEach(w=>{
+let b=document.createElement('button');b.className='chip';b.textContent=w;
+b.onclick=()=>{
+b.disabled=true;b.style.opacity='.4';selected.push(w);
+document.getElementById('sentence').textContent=selected.join(' ');
+if(selected.length===s[1].split(' ').length){
+let ok=selected.join(' ')===s[1];
+if(ok)reward(10);
+document.getElementById('message').textContent=ok?'🎉 صحيح!':'الصحيح: '+s[1];
+}
+};
+document.getElementById('sentenceWords').appendChild(b);
+});
+}
+function dictionary(){
+app.innerHTML='<h2>📖 قاموسي الشخصي</h2><div class="card" id="dictionary"></div>';
+let d=document.getElementById('dictionary');
+if(!Object.keys(saved).length)d.textContent='اضغط على الكلمات داخل القصص لحفظها هنا.';
+Object.entries(saved).forEach(([w,a])=>{
+let p=document.createElement('p');
+p.textContent=w+' — '+a+' 🔊';
+p.onclick=()=>speak(w);
+d.appendChild(p);
+});
+}
+function profile(){
+app.innerHTML=`<div class="hero"><div style="font-size:90px">🏆</div>
+<h2>إنجازاتي</h2><h1>${points} ⭐</h1><p>مجموع نقاطك</p></div>
+<div class="card"><h3>القصص المكتملة</h3><h2>${Math.min(unlocked,stories.length)} / ${stories.length}</h2>
+<progress value="${unlocked}" max="${stories.length}"></progress></div>
+<div class="card"><h3>الكلمات المكتسبة</h3><h2>${Object.keys(saved).length}</h2></div>
+<div class="card"><h3>مستواك</h3><h2>${points>=200?'👑 المستكشف المحترف':points>=80?'🥈 المغامر':'🥉 المستكشف المبتدئ'}</h2></div>`;
+}
+update();
+home();
+</script>
+</body>
+</html>
